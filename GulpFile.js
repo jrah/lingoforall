@@ -7,6 +7,9 @@ var sourcemaps = require('gulp-sourcemaps');
 var pump = require('pump');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
+// images
+var imagemin = require('gulp-imagemin');
+
 
 // Static Server + watching scss/html files
 gulp.task('serve', ['sass'], function() {
@@ -41,6 +44,7 @@ gulp.task('copy-build', function() {
         gulp.src('*.html')
         .pipe(gulp.dest('dist'))
         gulp.src(['images/*.svg', 'images/*.jpg'])
+        .pipe(imagemin())
         .pipe(gulp.dest('dist/images'))
 });
 
