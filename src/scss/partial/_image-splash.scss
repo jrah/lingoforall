@@ -1,11 +1,18 @@
 .image-splash {
+  @include mq(md) {
+    background-position: center;
+    min-height: 16rem;
+  }
+
   min-height: 4rem;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 
-  @include mq($md-screen) {
-    background-position: center;
-    min-height: 16rem;
+  &--heading {
+    @include mq(md) {
+      // @include fs(2);
+    }
+    // @include fs(5);
   }
 }
