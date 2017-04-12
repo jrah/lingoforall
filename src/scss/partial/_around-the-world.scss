@@ -1,0 +1,14 @@
+.around-the-world {
+  @include bg-color($black, $black, 0.7);
+  color: $white;
+  @include mq(md) {
+    @include bg-color($black, transparent, 0);
+    color: $text-color;
+    @for $i from 1 through 3 {
+
+      &--list li:nth-child(#{$i}) {
+        max-width: unquote(12+($i*4)+"rem");
+      }
+    }
+  }
+}
