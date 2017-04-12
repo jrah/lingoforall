@@ -29,7 +29,7 @@ gulp.task('sass', function() {
          .pipe(sass({
            includePaths: [
             './bower_components/mathsass/dist/',
-            './bower_components/madsauce/',
+            './bower_components/tachyons-sass/',
             './bower_components/'
          ]
        }))
