@@ -1,6 +1,6 @@
 .header {
   &--menu {
-    @include mq($md-screen) {
+    @include mq(md) {
       display: block;
     }
     display: none;
@@ -11,7 +11,7 @@
   }
 
   &--item {
-    @include mq($md-screen) {
+    @include mq(md) {
       display: inline-block;
       margin: 0 .25rem;
     }
@@ -19,10 +19,10 @@
   }
 
   &--menu-toggle {
-    @include flexbox;
-    @include justify-content(flex-end);
+    // @include flexbox;
+    // @include justify-content(flex-end);
 
-    @include mq($md-screen) {
+    @include mq(md) {
       display: none;
     }
 
