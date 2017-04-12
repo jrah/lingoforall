@@ -1,8 +1,8 @@
 .focus-point {
 
   &--list {
-    @include flexbox;
-    @include flex-direction(column);
+    // @include flexbox;
+    // @include flex-direction(column);
 
     li {
       flex: 1;
@@ -21,8 +21,8 @@
         }
       }
     }
-    @include mq($md-screen) {
-      @include flex-direction(row);
+    @include mq(md) {
+      // @include flex-direction(row);
 
     }
   }
