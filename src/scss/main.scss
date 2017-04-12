@@ -2,23 +2,25 @@
 
 $primary: #84bd00;
 
-// madsauce var
-
-$anchor-color: $primary;
-$anchor-visited: $primary;
-
-@import "madsauce/madsauce";
 @import "susy/sass/susy";
 // modules
 // craft modules
-@import "craftmodule/button";
-@import "craftmodule/form";
-@import "craftmodule/img";
-@import "craftmodule/susy";
-
-@import "madsauce/css/index";
-@import "madsauce/css/flex";
-
+@import "craftmodule/index";
 
 // partials
 @import "partial/index";
+
+// tachyons
+@import "tachyons-sass/tachyons";
+
+
+@mixin notice($border-color: $yellow, $background-color: $grey-lightest) {
+  border-left: 6px solid $border-color;
+  border-radius: 2px;
+  background-color: $background-color;
+  padding: .75rem;
+}
+
+.notice {
+  @include notice;
+}
