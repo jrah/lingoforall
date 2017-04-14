@@ -4,11 +4,22 @@ $primary: #84bd00;
 
 @import "susy/sass/susy";
 // modules
+
+$mqs: (
+  sm: 35.5em,
+  md: 48em,
+  lg: 60em
+);
+
 // craft modules
 @import "craftmodule/index";
 
 // partials
 @import "partial/index";
+
+$breakpoint-not-small: 'screen and (min-width: 35.5em)';
+$breakpoint-medium: 'screen and (min-width: 48em)';
+$breakpoint-large: 'screen and (min-width: 60em)';
 
 // tachyons
 @import "tachyons-sass/tachyons";
