@@ -1,5 +1,5 @@
 .around-the-world {
-  @include bg-color($black, $black, 0.7);
+  @include bg-color($black, $black, 0.9);
   color: $white;
   @include mq(md) {
     @include bg-color($black, transparent, 0);
