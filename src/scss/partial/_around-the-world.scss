@@ -1,20 +1,25 @@
 .around-the-world {
-  @for $i from 1 through 3 {
-
-    li:nth-child(#{$i}) {
-      max-width: unquote(12+($i * 4.5)+"rem");
-    }
-  }
 
   @include mq(md) {
+    @for $i from 1 through 3 {
+
+      li:nth-child(#{$i}) {
+        max-width: unquote(12+($i * 4.5)+"rem");
+      }
+    }
     @include bg-color($black, transparent, 0);
     color: $text-color;
+  }
+
+  @include mq(lg) {
     @for $i from 1 through 3 {
 
       li:nth-child(#{$i}) {
         max-width: unquote(24+($i * 4.5)+"rem");
       }
     }
+    @include bg-color($black, transparent, 0);
+    color: $text-color;
   }
   @include bg-color($black, $black, 0.9);
   color: $white;
