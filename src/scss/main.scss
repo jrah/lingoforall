@@ -8,7 +8,7 @@ $primary: #84bd00;
 $mqs: (
   sm: 35.5em,
   md: 48em,
-  lg: 60em
+  lg: 78em
 );
 
 // craft modules
@@ -19,7 +19,7 @@ $mqs: (
 
 $breakpoint-not-small: 'screen and (min-width: 35.5em)';
 $breakpoint-medium: 'screen and (min-width: 48em)';
-$breakpoint-large: 'screen and (min-width: 60em)';
+$breakpoint-large: 'screen and (min-width: 78em)';
 
 // tachyons
 @import "tachyons-sass/tachyons";
