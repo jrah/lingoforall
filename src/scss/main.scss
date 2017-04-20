@@ -1,6 +1,7 @@
 // project var
 
 $primary: #84bd00;
+$anchor-bottom-hover: darken($primary, 5%);
 
 @import "susy/sass/susy";
 // modules
