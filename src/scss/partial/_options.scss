@@ -1,17 +1,13 @@
-.focus-point {
+.options {
 
   &--list {
     // @include flexbox;
     // @include flex-direction(column);
-
-    li {
-      flex: 1;
-      padding: 0 .5em;
-    }
-
     .option {
       border: 0;
       color: $black;
+      flex: 1;
+      padding: 0 .5em;
 
       &:hover {
         color: $primary;
