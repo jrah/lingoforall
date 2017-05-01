@@ -4,11 +4,11 @@
   }
 
   @include mq(md) {
-    min-height: 12em;
+    min-height: 16em;
     background-position: center 40%;
 
     &--extended {
-      min-height: 16rem;
+      min-height: 24rem;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center 45%;
