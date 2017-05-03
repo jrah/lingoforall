@@ -1,0 +1,47 @@
+.comic {
+  &-slide {
+    position: relative;
+
+    &::before {
+      transform: skewY(-8.5deg);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      z-index: -1;
+    }
+
+      &--green {
+        &:before {
+          background: $green;
+          background: linear-gradient(45deg, adjust-hue($green, 60deg), $green);
+
+        }
+      }
+
+      &--blue {
+        &:before {
+          background: $blue;
+          background: linear-gradient(45deg, adjust-hue($blue, 60deg), $blue);
+
+        }
+      }
+
+      &--yellow {
+        &:before {
+          background: $yellow;
+          background: linear-gradient(45deg, adjust-hue($yellow, -60deg), $yellow);
+
+        }
+      }
+      &--primary {
+        &:before {
+          background: $primary;
+          background: linear-gradient(45deg, adjust-hue($primary, 60deg), $primary);
+
+        }
+      }
+    }
+  }
