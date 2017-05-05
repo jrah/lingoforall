@@ -10,47 +10,31 @@
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 </head>
 <body>
-  <div class="grid-12-12 pa-3">
-    <header>
-      <div class="grid-1-12-md">
-        <a href="#">
-          <h1 class="sr">Diversitea</h1>
-          <img src="images/logo-green.svg" alt="DiversiTea logo" width="64px" height="64px">
-        </a>
+  <header>
+
+    <nav class="flex-auto w-100 items-center">
+      <div class="grid-8-12">
+        <div class="mv3">
+          <a href="#">
+            <h1 class="sr">Diversitea - Tea from around the world subscription box</h1>
+            <img src="images/logo-green.svg" alt="DiversiTea logo" width="128px" height="56px">
+          </a>
+        </div>
       </div>
-
-      <div class="header--menu-toggle">
-        <button id="menu-toggle" class="btn btn--primary">Menu</button>
+      <div class="grid-4-12 grid-omega">
+        <ul class="flex justify-end mh4 mv3">
+          <li class="ma0 ph2 dib"><a href="#" class="bn f4">Sign In</a></li>
+          <li class="ma0 ph2 dib"><a href="#" class="bn f4">Cart</a></li>
+        </ul>
       </div>
+    </nav>
 
-      <div class="grid-11-12-md grid-omega">
-          <nav class="header--menu" id="js-nav">
-
-              <div class="grid-10-12">
-                <ul class="nolist fs3">
-                  <li class="header--item va-sub"><a href="#">Home</a></li>
-                  <li class="header--item va-sub"><a href="#">Membership</a></li>
-                  <li class="header--item va-sub"><a href="#">FAQ</a></li>
-                  <li class="header--item va-sub"><a href="#">Contact</a></li>
-                </ul>
-              </div>
-
-              <div class="grid-2-12-md grid-omega">
-                <ul class="nolist fs3">
-                  <li class="dib va-sub"><a href="#">Sign In</a></li>
-                </ul>
-              </div>
-
-          </nav>
-      </div>
-
-    </header>
-  </div>
+  </header>
 
   <main class="grid-break">
-    <div class="wrapper">
-      <div class="ma-3">
-        <h2 class="fs3 ta-center">Shopping Basket</h2>
+    <div class="grid-container">
+      <div class="ma3">
+        <h2 class="f2 tc mb2">Shopping Basket</h2>
       </div>
       <form action="/cart" method="post" novalidate="">
         <div class="grid-4-12">
@@ -58,38 +42,52 @@
         </div>
 
         <div class="grid-8-12 grid-omega">
-          <div class="mv-2">
               <ul class="nolist">
-                <li class="dib mh-1"><span class="db">Amount</span><span class="db">1</span></li>
-                <li class="dib mh-1"><span class="db">Product</span><span class="db"><a href="/products/monthly?variant=40440451014">Monthly</a></span></li>
-                <li class="dib mh-1"><span class="db">Total</span>  <span class="db" data-label="Price">£10.00</span></li>
-                <li class="dib ma-0"><a href="#" class="border-none"><span class="sr">Remove</span><img src="images/remove.svg" height="12px" width="12px" alt="Remove"></a></a></span></li>
+                <li class="dib mv2 grid-1-4"><span class="db">Product</span><span class="db"><a href="/products/monthly?variant=40440451014" class="bn">Monthly</a></span></li>
+                <li class="dib mv2 grid-1-4"><span class="db">Amount</span><span class="db">1</span></li>
+                <li class="dib mv2 grid-1-4"><span class="db">Total</span>  <span class="db" data-label="Price">£10.00</span></li>
+                <li class="dib mv2 grid-1-4 grid-omega tc"><span class="db">Remove</span>  <a href="#" class="bn pointer"><span class="sr">Remove</span><img src="images/remove.svg" height="14px" width="14px" class="dib" alt="Remove"></a></span></li>
               </ul>
+          <div class="grid-break mv2 bt b--light-gray">
+            <div class="grid-9-12">
+              <span class="db mv2">Shipping and taxes are calculated at checkout</span>
             </div>
-          <div class="mv-2">
-            <span class="db mv-2 notice">Shipping and taxes are calculated at checkout</span>
-            <label for="notes">Delivery instructions</label>
-            <textarea name="notes" rows="5" cols="25"></textarea>
+            <div class="grid-3-12 grid-omega">
+              <span class="db mv2 tr">Sub total: £10.00</span>
+            </div>
           </div>
-          <div class="db mv-2">
+          <div class="grid-break db mv-2 tr">
             <input type="submit" name="checkout" class="btn btn--primary" value="Check Out">
-            <input type="submit" name="update" class="btn" value="Update Cart">
+            <!-- <input type="submit" name="update" class="btn" value="Update Cart"> -->
           </div>
         </form>
     </div>
   </main>
 
-  <footer class="grid-break wrapper pv-2 ta-center">
-    <ul class="nolist footer-nav">
-      <li><a href="https://www.facebook.com/diversiteauk">Facebook</a></li>
-      <li><a href="#">Contact</a></li>
-      <li><a href="#">Returns</a></li>
-
-      <!-- <li><a href="#">Twitter</a></li>
-      <li><a href="#">Instagram</a></li> -->
+  <footer class="grid-container pv4 flex justify-center items-center flex-column">
+    <span class="db tc">&copy; Copyright DiversiTea 2017</span>
+    <ul class="nolist absolute-m right-1 db">
+      <li class="mh1 dib">
+        <a href="https://www.facebook.com/diversiteauk" target="_blank">
+          <img src="images/social-facebook-md.svg" alt="">
+        </a>
+      </li>
+      <li class="mh1 dib">
+        <a href="https://www.facebook.com/diversiteauk" target="_blank">
+          <img src="images/social-instagram-md.svg" alt="">
+        </a>
+      </li>
+      <li class="mh1 dib">
+        <a href="https://www.twitter.com/diversiteauk" target="_blank">
+          <img src="images/social-twitter-md.svg" alt="">
+        </a>
+      </li>
     </ul>
-    <span class="db">&copy; Copyright DiversiTea 2017</span>
+    <ul class="nolist absolute-m left-1 db">
+      <li class="mh1 dib"><a href="mailto:help@diversitea.co">help@diversitea.co</a></li>
+    </ul>
   </footer>
+
 <script src="js/app.js" charset="utf-8"></script>
 </body>
 </html>
