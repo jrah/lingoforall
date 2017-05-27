@@ -1,5 +1,6 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
+var rename      = require('gulp-rename');
 // sass
 var sass        = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
@@ -58,7 +59,22 @@ gulp.task('sass-build', function() {
          ]
        }))
         .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(gulp.dest("dist/css"))
+        .pipe(rename('main.min.css'))
+        .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('sass-min', function() {
+     gulp.src("src/scss/*.scss")
+         .pipe(sass({
+           includePaths: [
+            './bower_components/mathsass/dist/',
+            './bower_components/madsauce/',
+            './bower_components/'
+         ]
+       }))
+        .pipe(sass({outputStyle: 'compressed'}))
+        .pipe(rename('main.min.css'))
+        .pipe(gulp.dest('css'))
 });
 
 gulp.task('js-build', function () {
@@ -72,4 +88,4 @@ gulp.task('js-build', function () {
 });
 
 gulp.task('default', ['serve']);
-gulp.task('build', ['js-build', 'copy-build', 'sass-build']);
+gulp.task('build', ['js-build', 'copy-build', 'sass-build', 'sass-min']);
