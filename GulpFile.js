@@ -4,6 +4,8 @@ var rename      = require('gulp-rename');
 // sass
 var sass        = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
+var autoprefixer = require('gulp-autoprefixer');
+
 // js
 var pump = require('pump');
 var uglify = require('gulp-uglify');
@@ -35,6 +37,10 @@ gulp.task('sass', function() {
          ]
        }))
        .pipe(sourcemaps.init())
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
        .pipe(sass().on('error', sass.logError))
        .pipe(sourcemaps.write())
         .pipe(gulp.dest("css"))
