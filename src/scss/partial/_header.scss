@@ -1,31 +1,52 @@
 .header {
-  &--menu {
-    @include mq(md) {
-      display: block;
-    }
+  .menu {
     display: none;
-
-    &.open {
-      display: block;
-    }
-  }
-
-  &--item {
     @include mq(md) {
-      display: inline-block;
-      margin: 0 .25rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+      position: relative;
+      width: 100%;
+      padding: 0;
+      background-color: inherit;
+      margin: 0;
+      height: inherit;
+
+      &__item {
+        margin: .5rem;
+      }
     }
-    display: block;
-  }
 
-  &--menu-toggle {
-    // @include flexbox;
-    // @include justify-content(flex-end);
+    &--open {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      background-color: rgba($black, .8);
+      margin: 0;
+      height: 50vh;
+    }
 
+
+    &__item {
+      margin: .5rem;
+    }
+
+  &__toggle {
     @include mq(md) {
       display: none;
     }
 
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    user-select: none;
+    z-index: 1;
+    }
   }
 
 }

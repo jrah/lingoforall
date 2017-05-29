@@ -1,7 +1,9 @@
 /* global document:true*/
-const menuToggle = document.querySelector('#menu-toggle');
-const menu = document.querySelector('.header--menu');
+const menuToggle = document.querySelector('.menu__toggle');
 
-menuToggle.addEventListener('click', function () {
-  menu.classList.toggle('open');
+menuToggle.addEventListener('click', (e) => {
+  const menu = document.querySelector('.menu');
+  e.stopPropagation();
+  e.preventDefault();
+  menu.classList.toggle('menu--open');
 });
