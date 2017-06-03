@@ -1,3 +1,11 @@
+%toggle {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  user-select: none;
+  z-index: 2;
+}
+
 .header {
   .menu {
     display: none;
@@ -5,7 +13,6 @@
     @include mq(md) {
       display: flex;
       flex-direction: row;
-      align-items: center;
       justify-content: flex-end;
       position: relative;
       padding: 0;
@@ -19,6 +26,10 @@
     }
 
     &--open {
+      // make toggle icon white when clicked
+      & + .menu__toggle {
+        color: $white;
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -39,16 +50,37 @@
     }
 
   &__toggle {
+    @extend %toggle;
     @include mq(md) {
       display: none;
     }
-
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    user-select: none;
-    z-index: 2;
+    }
+  }
+  &__search {
+    .close-input {
+      border-style: none;
+      border-width: 0;
+      border-right: 1px solid $grey-light;
+      &:hover {
+        border-color: $grey-light;
+      }
+      &:first-child {
+        @include mq(md) {
+          width: 24rem;
+        }
+        // width: 24rem;
+      }
+      &:nth-child(2) {
+        @include mq(md) {
+          width: 6rem;
+          margin: 0;
+        }
+        // width: 6rem;
+        margin: 0.25rem 0;
+        border: 0;
+      }
     }
   }
 
 }
+

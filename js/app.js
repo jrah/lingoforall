@@ -1,4 +1,5 @@
 /* global document:true*/
+
 const menuToggle = document.querySelector('.menu__toggle');
 
 menuToggle.addEventListener('click', (e) => {

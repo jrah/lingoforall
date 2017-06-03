@@ -1,6 +1,6 @@
 // project var
 
-$primary: #84bd00;
+$primary: #067BC2;
 $anchor-bottom-hover: darken($primary, 5%);
 
 @import "susy/sass/susy";
@@ -12,11 +12,50 @@ $mqs: (
   lg: 78em
 );
 
-// craft modules
-@import "craftmodule/index";
+// craft init
+@import "craftmodule/init";
 
 // partials
 @import "partial/index";
+
+// craft modules
+@import "craftmodule/susy";
+@import "craftmodule/base";
+@import "craftmodule/button";
+// @import "craftmodule/form";
+input[type="search"], input[type="text"], input[type="number"], input[type="password"], textarea, input[type="email"] {
+	outline: 0;
+	border-radius: 0;
+	color: $grey-dark;
+  vertical-align: middle;
+  margin: 0;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: .01px;
+  text-overflow: "";
+  display: inline-block;
+  border: 1px solid $grey-light;
+  outline: 0;
+  border-radius: 0;
+  box-shadow: 0 1px 3px rgba($grey, 0.1);
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+label {
+  display: block;
+  margin: .25em 0;
+  font-size: 100%;
+  line-height: 1.5;
+  vertical-align: baseline;
+}
+@import "craftmodule/notice";
+@import "craftmodule/svg";
+@import "craftmodule/theme";
+
 
 $breakpoint-not-small: 'screen and (min-width: 35.5em)';
 $breakpoint-medium: 'screen and (min-width: 48em)';

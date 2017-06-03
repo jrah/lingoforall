@@ -1,0 +1,12 @@
+.accordion {
+  // set position relative due to cavet absolute
+  position: relative;
+
+  &-cavet {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 24px;
+    width: 24px;
+  }
+}

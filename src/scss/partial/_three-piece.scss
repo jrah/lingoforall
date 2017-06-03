@@ -1,0 +1,15 @@
+.three-piece {
+  img {
+    object-fit: cover;
+  }
+  &__item {
+      box-shadow: 2px 2px 2px -2px rgba($black, 0.2);
+      border: 1px solid $grey-light;
+      flex-basis: 100%;
+  }
+  &__push-height {
+    @include mq(md) {
+      height: 170px;
+    }
+  }
+}

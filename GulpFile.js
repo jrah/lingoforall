@@ -78,6 +78,10 @@ gulp.task('sass-min', function() {
             './bower_components/'
          ]
        }))
+          .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('css'))
