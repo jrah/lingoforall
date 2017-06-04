@@ -84,6 +84,12 @@
   &__tagline {
     text-shadow: 1px 1px 2px $black;
   }
+  &__title {
+    font-size: 2rem;
+    @include mq(md) {
+      font-size: 3.8rem;
+    }
+  }
 
   &__logo--landing {
     width: 128px;
